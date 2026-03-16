@@ -17,8 +17,7 @@ export default function ComparisonSection() {
           HotHawk vs Master Inbox
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-center text-slate-600">
-          Both help teams collaborate on email — but they are designed for different workflows. Wording uses
-          &quot;Designed for,&quot; &quot;Focused on,&quot; and &quot;Better suited for&quot; to stay factual.
+          HotHawk is for support tickets. Master Inbox is for outbound reply management.
         </p>
 
         <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">

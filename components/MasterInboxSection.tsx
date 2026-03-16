@@ -12,10 +12,6 @@ export default function MasterInboxSection() {
         <h2 className="text-center text-2xl font-bold tracking-tight sm:text-3xl">
           Why Teams Choose Master Inbox Instead
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-slate-300">
-          Fact-based positioning: Master Inbox is built for outbound reply management at scale. No unverifiable claims —
-          just a better fit for sales workflows.
-        </p>
 
         <ul className="mx-auto mt-10 max-w-2xl space-y-4">
           {points.map((point) => (
