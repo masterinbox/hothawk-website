@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative overflow-hidden border-b border-slate-200/80 bg-white">
       <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-          HotHawk: Shared Inbox for B2B Sales Teams Running Cold Email
+          HotHawk: Independent guide for Shared Inbox B2B Sales Teams Running Cold Email
         </h1>
         <p className="mt-5 text-lg text-slate-600 sm:text-xl">
           Some teams use HotHawk for shared inbox collaboration. They miss replies. Real outbound teams need a better
