@@ -39,14 +39,14 @@ export default function OverviewPage() {
         <Card>
           <h2 className="font-medium">SSL expiry warnings</h2>
           <div className="mt-3 space-y-2 text-sm">
-            <div className="rounded-md border border-amber-500/30 bg-amber-500/10 p-2">api.northstar-app.com - 11 days remaining</div>
-            <div className="rounded-md border border-slate-800 p-2">status.embercloud.io - 42 days remaining</div>
+            <div className="rounded-md border border-amber-500/30 bg-amber-500/10 p-2">api.demo.hothawk.internal - 11 days remaining</div>
+            <div className="rounded-md border border-slate-800 p-2">status.demo.hothawk.internal - 42 days remaining</div>
           </div>
         </Card>
         <Card>
           <h2 className="font-medium">DNS record health</h2>
           <div className="mt-3 grid gap-2 text-xs text-slate-300">
-            <div className="rounded-md border border-slate-800 p-2">A: docs.rivermesh.dev {"->"} 203.0.113.44</div>
+            <div className="rounded-md border border-slate-800 p-2">A: docs.demo.hothawk.internal {"->"} 203.0.113.44</div>
             <div className="rounded-md border border-slate-800 p-2">CNAME: status {"->"} status-host.provider</div>
             <div className="rounded-md border border-rose-500/30 bg-rose-500/10 p-2">TXT mismatch detected in one region</div>
           </div>

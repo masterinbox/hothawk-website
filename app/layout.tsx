@@ -11,10 +11,31 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Website Monitoring and Infrastructure Surveillance`,
+  metadataBase: new URL(siteConfig.domain),
+  title: `${siteConfig.name} | Infrastructure monitoring and reliability`,
   description: siteConfig.description,
+  keywords: [
+    "HotHawk",
+    "infrastructure monitoring",
+    "uptime monitoring",
+    "SSL monitoring",
+    "DNS monitoring",
+    "API monitoring",
+    "website monitoring",
+    "endpoint monitoring",
+    "incident monitoring",
+  ],
   openGraph: {
-    title: `${siteConfig.name} | Website Monitoring and Infrastructure Surveillance`,
+    title: `${siteConfig.name} | Infrastructure monitoring and reliability`,
+    description: siteConfig.description,
+    url: siteConfig.domain,
+    siteName: siteConfig.name,
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} | Infrastructure monitoring and reliability`,
     description: siteConfig.description,
   },
 };
@@ -39,6 +60,30 @@ export default function RootLayout({
             gtag('config', 'G-H4QP05FNCQ');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "WebSite",
+                  name: siteConfig.name,
+                  url: siteConfig.domain,
+                  description: siteConfig.description,
+                },
+                {
+                  "@type": "SoftwareApplication",
+                  name: siteConfig.name,
+                  applicationCategory: "DeveloperApplication",
+                  operatingSystem: "Web",
+                  description: siteConfig.description,
+                  url: siteConfig.domain,
+                },
+              ],
+            }),
+          }}
+        />
         {children}
       </body>
     </html>

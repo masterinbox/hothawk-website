@@ -11,12 +11,13 @@ export type Monitor = {
   lastChecked: string;
 };
 
+/** Illustrative monitor rows for UI demos — not live customer data. */
 export const monitors: Monitor[] = [
   {
     id: "m_01",
-    name: "Checkout API",
+    name: "API health",
     type: "uptime",
-    target: "https://checkout.lumena.shop/health",
+    target: "https://api.demo.hothawk.internal/health",
     status: "operational",
     frequency: "30s",
     regions: 8,
@@ -26,7 +27,7 @@ export const monitors: Monitor[] = [
   },
   {
     id: "m_02",
-    name: "Northstar Public API",
+    name: "Edge IP reachability",
     type: "ip",
     target: "203.0.113.44",
     status: "degraded",
@@ -38,9 +39,9 @@ export const monitors: Monitor[] = [
   },
   {
     id: "m_03",
-    name: "Docs Cluster",
+    name: "Docs DNS",
     type: "dns",
-    target: "docs.rivermesh.dev",
+    target: "docs.demo.hothawk.internal",
     status: "operational",
     frequency: "2m",
     regions: 5,
@@ -55,7 +56,7 @@ export const incidents = [
     id: "inc_912",
     title: "Elevated latency in eu-west checks",
     severity: "medium",
-    monitor: "Checkout API",
+    monitor: "API health",
     startedAt: "2026-03-15 14:12 UTC",
     endedAt: "2026-03-15 14:41 UTC",
     status: "resolved",
@@ -64,7 +65,7 @@ export const incidents = [
     id: "inc_913",
     title: "DNS propagation mismatch detected",
     severity: "low",
-    monitor: "Docs Cluster",
+    monitor: "Docs DNS",
     startedAt: "2026-03-16 03:19 UTC",
     endedAt: "2026-03-16 04:08 UTC",
     status: "resolved",
@@ -75,13 +76,13 @@ export const blogPosts = [
   {
     slug: "monitor-ssl-expiration",
     title: "How to monitor SSL expiration before it hurts uptime",
-    excerpt: "A practical SSL monitoring workflow for small teams.",
+    excerpt: "A practical workflow: expiry windows, issuer changes, and alert thresholds.",
     date: "2026-03-10",
   },
   {
     slug: "dns-failures-real-world",
     title: "DNS issues that silently take sites down",
-    excerpt: "Where DNS breaks and how to detect it earlier.",
+    excerpt: "TTL drift, partial propagation, and how multi-region checks surface them earlier.",
     date: "2026-03-08",
   },
 ];
@@ -95,4 +96,3 @@ export const docsArticles = [
   { slug: "team-settings", title: "Team settings" },
   { slug: "api-overview", title: "API overview" },
 ];
-

@@ -35,10 +35,3 @@ export const legalSlugs = [
   "subprocessors",
 ];
 
-export const compareSlugs = [
-  "uptimerobot-alternative",
-  "pingdom-alternative",
-  "betterstack-alternative",
-  "cloudflare-monitoring-alternative",
-];
-

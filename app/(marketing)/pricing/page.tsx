@@ -1,37 +1,61 @@
 import { createMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-
+import { PricingPlans } from "@/components/marketing/pricing-plans";
 export const metadata = createMetadata({
   title: "Pricing",
-  description: "Simple uptime and infrastructure monitoring plans for teams of different sizes.",
+  description:
+    "HotHawk plans for website uptime, SSL, DNS, and endpoint monitoring. Simple tiers by monitors, check frequency, and seats.",
   path: "/pricing",
 });
-
-const plans = [
-  { name: "Starter", price: "$19", items: ["25 monitors", "5-min checks", "Direct alerts", "1 seat"] },
-  { name: "Pro", price: "$79", items: ["150 monitors", "60-sec checks", "Status page", "5 seats"] },
-  { name: "Scale", price: "$249", items: ["600 monitors", "30-sec checks", "Audit logs", "20 seats + API"] },
-];
 
 export default function PricingPage() {
   return (
     <section className="mx-auto max-w-7xl px-4 py-16">
-      <h1 className="text-4xl font-semibold">HotHawk Pricing</h1>
-      <p className="mt-3 text-slate-300">Choose a plan based on check frequency, monitor volume, and team seats.</p>
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        {plans.map((plan) => (
-          <Card key={plan.name}>
-            <p className="text-lg font-semibold">{plan.name}</p>
-            <p className="mt-2 text-3xl font-bold">{plan.price}<span className="text-sm text-slate-400">/mo</span></p>
-            <ul className="mt-4 space-y-2 text-sm text-slate-300">
-              {plan.items.map((i) => <li key={i}>- {i}</li>)}
-            </ul>
-            <Button href="/signup" className="mt-6 w-full">Start {plan.name}</Button>
-          </Card>
-        ))}
+      <h1 className="text-4xl font-semibold text-slate-50">Pricing</h1>
+      <p className="mt-4 max-w-2xl text-slate-300">
+        Every plan includes core uptime checks, incident timelines, and workspace controls. Higher tiers add faster intervals,
+        more monitors, collaboration seats, status pages, and API access. Exact limits ship with the product and may evolve as
+        we improve the platform.
+      </p>
+      <div className="mt-10">
+        <PricingPlans />
       </div>
+
+      <div className="mt-16 grid gap-4 md:grid-cols-2">
+        <Card>
+          <h2 className="font-medium text-slate-100">Plan overview</h2>
+          <ul className="mt-3 space-y-2 text-sm text-slate-300">
+            <li>- Starter: essentials for a single owner or tiny team</li>
+            <li>- Pro: production teams with status pages and richer checks</li>
+            <li>- Scale: higher volume, API automation, and more seats</li>
+          </ul>
+        </Card>
+        <Card>
+          <h2 className="font-medium text-slate-100">FAQs</h2>
+          <ul className="mt-3 space-y-3 text-sm text-slate-300">
+            <li>
+              <span className="font-medium text-slate-200">What counts as a monitor?</span> Each target you track—URL, API,
+              SSL, DNS zone, IP, or heartbeat—typically counts as one monitor.
+            </li>
+            <li>
+              <span className="font-medium text-slate-200">Can I change plans later?</span> Yes. Upgrade or downgrade according
+              to the terms in your account.
+            </li>
+          </ul>
+        </Card>
+      </div>
+
+      <Card className="mt-10">
+        <h2 className="font-medium text-slate-100">Need a custom enterprise footprint?</h2>
+        <p className="mt-2 text-sm text-slate-300">
+          For large monitor counts, dedicated review of compliance needs, or bespoke alerting workflows, contact us at{" "}
+          <a href={`mailto:${siteConfig.contactEmail}`} className="text-sky-400 hover:underline">
+            {siteConfig.contactEmail}
+          </a>{" "}
+          with your requirements.
+        </p>
+      </Card>
     </section>
   );
 }
-
