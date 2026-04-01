@@ -23,14 +23,6 @@ export default function Hero() {
           >
             See Why Teams Switch
           </a>
-          <a
-            href="https://masterinbox.com/demo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex rounded-xl border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-900 shadow-sm transition hover:bg-slate-50"
-          >
-            Book a Demo
-          </a>
         </div>
 
         <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">

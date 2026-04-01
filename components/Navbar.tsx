@@ -31,24 +31,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden items-center gap-3 md:flex">
-          <a
-            href="https://masterinbox.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg px-4 py-2 text-sm font-medium text-slate-700 transition-colors hover:text-slate-900"
-          >
-            See Master Inbox
-          </a>
-          <a
-            href="https://masterinbox.com/demo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800"
-          >
-            Book Demo
-          </a>
-        </div>
 
         <button
           type="button"
@@ -79,22 +61,6 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="https://masterinbox.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-slate-700"
-            >
-              See Master Inbox
-            </a>
-            <a
-              href="https://masterinbox.com/demo"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-lg bg-slate-900 px-4 py-2 text-center text-sm font-semibold text-white"
-            >
-              Book Demo
-            </a>
           </div>
         </div>
       )}

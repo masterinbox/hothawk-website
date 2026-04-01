@@ -30,16 +30,6 @@ export default function MasterInboxSection() {
           ))}
         </ul>
 
-        <div className="mt-12 text-center">
-          <a
-            href="https://masterinbox.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex rounded-xl bg-white px-6 py-3 text-base font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
-          >
-            See Master Inbox in Action
-          </a>
-        </div>
       </div>
     </section>
   );
