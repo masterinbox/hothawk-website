@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/lib/site-config";
 import { featureSlugs, useCaseSlugs, legalSlugs } from "@/data/pages";
-import { blogPosts, docsArticles } from "@/data/demo";
+import { blogPosts } from "@/data/demo";
+import { docsArticles } from "@/data/docs";
 
 const staticPaths = [
   "/",

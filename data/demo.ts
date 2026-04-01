@@ -87,12 +87,3 @@ export const blogPosts = [
   },
 ];
 
-export const docsArticles = [
-  { slug: "getting-started", title: "Getting started" },
-  { slug: "first-monitor", title: "Creating your first monitor" },
-  { slug: "incidents", title: "Understanding incidents" },
-  { slug: "alerts", title: "Alerting basics" },
-  { slug: "status-pages", title: "Status pages" },
-  { slug: "team-settings", title: "Team settings" },
-  { slug: "api-overview", title: "API overview" },
-];

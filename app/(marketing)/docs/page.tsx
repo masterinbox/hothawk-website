@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { createMetadata } from "@/lib/seo";
-import { docsArticles } from "@/data/demo";
+import { docsArticles } from "@/data/docs";
 import { Card } from "@/components/ui/card";
 
 export const metadata = createMetadata({
@@ -49,7 +49,8 @@ export default function DocsPage() {
           <Link key={doc.slug} href={`/docs/${doc.slug}`}>
             <Card className="h-full border-slate-800 transition hover:border-slate-600">
               <p className="font-medium text-slate-100">{doc.title}</p>
-              <p className="mt-2 text-sm text-slate-500">Open guide</p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-400">{doc.description}</p>
+              <p className="mt-3 text-sm font-medium text-sky-400">Read guide →</p>
             </Card>
           </Link>
         ))}
