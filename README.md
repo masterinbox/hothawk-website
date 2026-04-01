@@ -1,6 +1,6 @@
-# Hothawk.com — SEO landing page
+# HotHawk Frontend
 
-Modern SaaS-style marketing site for **hothawk.com** built with Next.js and Tailwind CSS. Targets “HotHawk” and “shared inbox for cold email” search intent and positions **Master Inbox** as the stronger solution for outbound reply management.
+Production-style frontend for **HotHawk**, a monitoring and infrastructure surveillance platform.
 
 ## Run locally
 
@@ -20,18 +20,18 @@ npm start
 
 ## Structure
 
-- **Single landing page** with: Navbar, Hero + value bullets, The Difference (support vs outbound), Modern Outbound Stack, Problem section, Features, Master Inbox section, HotHawk vs Master Inbox comparison table, Testimonials, FAQ, Final CTA, Footer.
-- **SEO**: Title, meta description, and H1 aligned with “HotHawk: Shared Inbox for B2B Sales Teams Running Cold Email”.
-- **Design**: Clean, minimal, conversion-focused (inspired by outbound SaaS landing pages). DM Sans, light background, rounded cards, sticky nav.
+- **Marketing site** with core pages, feature pages, use-case pages, docs/blog, pricing, status, company routes, and legal routes.
+- **Frontend app shell** with overview, monitors, incidents, alerts, status pages, domains, SSL, IP checks, DNS, team, billing, and settings views.
+- **Design**: dark-first, monitoring-focused, responsive, and reusable component architecture.
 
 ## Optional next steps
 
-- Add extra SEO routes (e.g. `/instantly-shared-inbox`, `/smartlead-reply-management`, `/heyreach-linkedin-replies`, `/outbound-reply-management`) and link from this page where relevant.
-- Replace placeholder testimonial text with real quotes and attribution.
-- Point CTA buttons to real Master Inbox demo/booking URLs when ready.
+- Connect routes to backend APIs and auth.
+- Replace placeholder legal/contact details in `lib/site-config.ts`.
+- Add real charts/data sources and production analytics settings.
 
 ## Tech
 
-- Next.js 14 (App Router)
-- Tailwind CSS
-- TypeScript
+- Next.js 14 (App Router), TypeScript, Tailwind CSS
+- lucide-react, Framer Motion
+- Hybrid utility system with reusable UI components

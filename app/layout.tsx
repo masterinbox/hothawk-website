@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import Script from "next/script";
+import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -10,13 +11,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "HotHawk: Shared Inbox for B2B Sales Teams Running Cold Email",
-  description:
-    "HotHawk is often used as a shared inbox for teams managing email conversations. But real outbound teams need stronger reply management across email and LinkedIn. Learn how modern teams manage replies at scale with Master Inbox.",
+  title: `${siteConfig.name} | Website Monitoring and Infrastructure Surveillance`,
+  description: siteConfig.description,
   openGraph: {
-    title: "HotHawk: Shared Inbox for B2B Sales Teams Running Cold Email",
-    description:
-      "HotHawk is often used as a shared inbox for teams managing email conversations. But real outbound teams need stronger reply management across email and LinkedIn.",
+    title: `${siteConfig.name} | Website Monitoring and Infrastructure Surveillance`,
+    description: siteConfig.description,
   },
 };
 
@@ -27,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={dmSans.variable}>
-      <body className="min-h-screen font-sans antialiased bg-[#fafafa] text-slate-900">
+      <body className="min-h-screen bg-slate-950 font-sans antialiased text-slate-100">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-H4QP05FNCQ"
           strategy="afterInteractive"
